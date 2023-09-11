@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [@via Vercel]()
-- Live Site URL: [@via Netlify]()
+- Live Site URL: [@via Vercel](my-weatheraapp.vercel.app)
+- Live Site URL: [@via Netlify](https://my-weatheraapp.netlify.app/)
 
 ### Built with
 

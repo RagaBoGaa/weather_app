@@ -7,8 +7,7 @@ import {
   StyledSearchInput,
 } from "../styles/Styles";
 
-function Header({ unit, setUnit, handleSubmit, query, handleSearch }) {
-  const isQuery = Boolean(query);
+function Header({ unit, setUnit, handleSubmit, query, handleSearch, unitBtn }) {
   function toggleTemperatureUnit() {
     setUnit(unit === "metric" ? "imperial" : "metric");
   }
@@ -31,7 +30,7 @@ function Header({ unit, setUnit, handleSubmit, query, handleSearch }) {
           <StyledBtn
             variation="primary"
             onClick={toggleTemperatureUnit}
-            disabled={!isQuery}
+            disabled={unitBtn}
           >
             {unit === "metric" ? "°F" : "°C"}
           </StyledBtn>

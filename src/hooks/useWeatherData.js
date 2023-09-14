@@ -6,6 +6,7 @@ function useWeatherData() {
   const [query, setQuery] = useState("");
   const [error, setError] = useState(null);
   const [unit, setUnit] = useState("metric"); // metric / imperia
+  const [unitBtn, setUnitBtn] = useState(true);
 
   useEffect(() => {
     if (query) {
@@ -23,10 +24,12 @@ function useWeatherData() {
         const data = await res.json();
         setError(data.message || "An error occurred");
         setWeatherData(null);
+        setUnitBtn(true);
       } else {
         const data = await res.json();
         setWeatherData(data);
         setError(null);
+        setUnitBtn(false);
       }
     } catch (error) {
       setError(error.message || "Not a valid city");
@@ -56,6 +59,8 @@ function useWeatherData() {
     setUnit,
     handleSubmit,
     toggleTemperatureUnit,
+    unitBtn,
+    setUnitBtn,
   };
 }
 

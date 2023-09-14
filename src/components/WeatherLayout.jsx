@@ -14,6 +14,7 @@ function WeatherLayout() {
     handleSubmit,
     query,
     handleSearch,
+    unitBtn,
   } = useWeatherData();
 
   return (
@@ -23,6 +24,7 @@ function WeatherLayout() {
           unit={unit}
           setUnit={setUnit}
           query={query}
+          unitBtn={unitBtn}
           handleSearch={handleSearch}
           handleSubmit={handleSubmit}
         />

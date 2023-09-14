@@ -13,7 +13,7 @@ function Main({ weatherData, unit }) {
         <Col>
           <img
             src={`https://openweathermap.org/img/wn/${weatherData?.weather[0]?.icon}@2x.png`}
-            alt="weather icon"
+            alt="weather icon from openweathermap"
           />
           <span>{weatherData?.weather[0]?.description}</span>
 

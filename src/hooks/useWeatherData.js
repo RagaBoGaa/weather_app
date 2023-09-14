@@ -8,7 +8,9 @@ function useWeatherData() {
   const [unit, setUnit] = useState("metric"); // metric / imperia
 
   useEffect(() => {
-    fetchData();
+    if (query) {
+      fetchData();
+    }
   }, [unit]);
 
   async function fetchData() {
